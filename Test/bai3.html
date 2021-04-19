@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Array = [];
+    let Length = prompt("Nhập độ dài của mảng : ");
+    for (i = 0 ; i < Length ; i++){
+        let input = prompt("Nhập phần tử của mảng : ");
+        Array.push(input);
+    }
+    document.write("Mảng : "+Array+"</br>");
+    for (i = 0 ; i < Array.length;i++){
+        if (kiem_tra(Array[i])==true){
+            document.write("Số hoàn hảo có trong mảng : "+Array[i]+"</br>");
+            let array = Array.indexOf(Array[i]);
+            document.write("Vị trí của số hoàn hảo : "+array+"</br>");
+        }
+    }
+    function kiem_tra(Num) {
+        let kiem_tra=0;
+        for (let i = 1;i<Num;i++){
+            if (Num%i==0){
+                kiem_tra += i ;
+            }
+        }
+        if (kiem_tra==Num){
+            return true;
+        }else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

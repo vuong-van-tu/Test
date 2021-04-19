@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1</title>
+</head>
+<body>
+<script>
+    function tongLe() {
+        let array = [];
+        let sum = 0 ;
+        let a = prompt("Nhập độ dài của mảng : ");
+        for (let i = 0 ; i < a ; i ++){
+            let input =+ prompt("Nhập phần tử mảng :");
+            array.push(input);
+        };
+
+        for (i = 0 ; i < array.length;i++){
+            if (array[i]%2==1){
+                sum += array[i];
+            }
+        }
+        document.write("Mảng : "+array+"</br>");
+        document.write("Tổng các số lẻ có trong mảng là : "+ sum);
+    }
+    tongLe();
+</script>
+</body>
+</html>

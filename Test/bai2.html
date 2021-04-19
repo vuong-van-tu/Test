@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    function kiem_tra(Num) {
+        let kiem_tra=0;
+        for (let i = 1;i<Num;i++){
+            if (Num%i==0){
+                kiem_tra += i ;
+            }
+        }
+        if (kiem_tra==Num){
+            document.write("Số "+Num+" là số hoàn hảo");
+        }else {
+            document.write("Số "+Num + " không phải số hoàn hảo");
+        }
+    }
+    kiem_tra(prompt("Nhập số cần kiểm tra : "));
+</script>
+</body>
+</html>

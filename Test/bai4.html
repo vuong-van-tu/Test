@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<p>Add Customer</p>
+<input type="text" id="addMakh"> <button onclick="addMakh()">AddMakh</button></br>
+<input type="text" id="addName"> <button onclick="addName()">AddName</button></br>
+<input type="text" id="addNgaySinh"> <button onclick="addNgaySinh()">AddNgaySinh</button></br>
+<input type="text" id="addGioiTinh"> <button onclick="addGioiTinh()">AddGioiTinh</button></br>
+<input type="text" id="addDiaChi"> <button onclick="addDiaChi()">AddDiaChi</button></br>
+<p>Display All Customer</p>
+<table id="DisplayArea" border="1px"></table>
+<div id="edit"></div>
+<script>
+    let array = [];
+    function displayall() {
+        let str = '<tr>\n'+
+            '<td>MãKH</td>'+
+            '<td>Họ và tên</td>'+
+            '<td>Ngày sinh</td>'+
+            '<td>Giới tính</td>'+
+            '<td>Địa chỉ </td>'+
+            '</tr>'
+        for (i=0;i<array.length;i++){
+            str += '<tr><td>'+ array[i] +'</td>'+
+                '<td>'+array[i]+'</td>'+
+                '<td>'+array[i]+'</td>'+
+                '<td>'+array[i]+'</td>'+
+                '<td>'+array[i]+'</td>'+
+                '<td><button onclick="Edit('+ i +');">Edit</button></td>'+
+                '<td><button onclick="Delete('+i +');">Delete</button></td>'+
+                '</tr>';
+        }
+        document.getElementById('DisplayArea').innerHTML = str ;
+    }
+
+    displayall();
+
+    function addMakh() {
+        let Makh = document.getElementById('addMakh').value;
+        document.getElementById('addMakh').value='';
+        array.push(Makh);
+        displayall();
+    }
+    function addName() {
+        let Name = document.getElementById('addName').value;
+        document.getElementById('addName').value = "";
+        array.push(Name);
+        displayall();
+    }
+    function addNgaySinh() {
+        let NgaySinh = document.getElementById('addNgaySinh').value;
+        document.getElementById('addNgaySinh').value = "";
+        array.push(NgaySinh);
+        displayall();
+    }
+    function addGioiTinh() {
+        let GioiTinh = document.getElementById('addGioiTinh').value;
+        document.getElementById('addGioiTinh').value = "";
+        array.push(GioiTinh);
+
+    }
+
+    function Edit() {
+
+    }
+    function Delete() {
+
+    }
+</script>
+</body>
+</html>
